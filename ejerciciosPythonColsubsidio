@@ -1,0 +1,308 @@
+#Establecer la tortuga
+import turtle
+tiny = turtle.Turtle()
+tiny.pensize(5)
+
+#Usar un bucle for para dibujar un cuadrado
+for i in range(4):
+  tiny.forward(150)
+  tiny.right(90)
+  
+  
+  
+#Establecer la tortuga
+import turtle
+tiny = turtle.Turtle()
+tiny.pensize(5)
+
+#Hacer una lista de colores
+colors = ["red", "yellow", "blue", "green"]
+
+#Usar un bucle para dibujar un cuadrado que tenga un lado de cada color
+for i in range(4):
+  tiny.pencolor()
+  tiny.color(colors[i])
+  tiny.forward(150)
+  tiny.right(90)
+
+
+
+#Establecer la tortuga
+import turtle
+tiny = turtle.Turtle()
+tiny.pensize(5)
+
+#Ponerse en posición 
+tiny.penup()
+tiny.goto(60, 220)
+tiny.pendown()
+
+#Dibujar un hexágono rojo
+tiny.pencolor("red")
+for i in range(6):
+  tiny.forward(100)
+  tiny.left(60)
+
+#Ponerse en posición
+tiny.penup()
+tiny.goto(360, 220)
+tiny.pendown()
+
+#Dibujar un triángulo de borde azul e interior amarillo
+tiny.pencolor("blue")
+tiny.fillcolor("yellow")
+tiny.begin_fill()
+for i in range(3):
+  tiny.forward(100)
+  tiny.left(120)
+tiny.end_fill()
+
+
+#Ponerse en posición
+tiny.penup()
+tiny.goto(200, 440)
+tiny.pendown()
+
+#Dibujar un pentágono rosa rellenado
+tiny.pencolor("pink")
+tiny.fillcolor("pink")
+
+tiny.begin_fill()
+for i in range(5):
+  tiny.forward(100)
+  tiny.left(72)
+tiny.end_fill()
+
+
+#Establecer la tortuga
+import turtle
+spiro = turtle.Turtle()
+spiro.color("blue")
+
+#Dibujar un espirógrafo
+for i in range(100):
+  #Change colors
+  if i == 20:
+    spiro.color("red")
+  elif i == 40:
+    spiro.color("orange")
+  elif i == 60:
+    spiro.color("yellow")
+  elif i == 80:
+    spiro.color("green")
+    
+  #Draw the spirograph
+  spiro.forward(200)
+  spiro.left(184)
+  spiro.forward(40)
+  spiro.right(30)
+  
+
+#Establecer - siempre importa todo a la vez al principio de tu código
+import random
+import turtle
+
+spiro = turtle.Turtle()
+spiro.pensize(2)
+spiro.goto(100,250)
+
+#Cambiar colores
+red = random.randrange(0,255)
+green = random.randrange(0,255)
+blue = random.randrange(0,255)
+spiro.color(red,green,blue)
+
+
+#Dibujar un espirógrafo
+for i in range(100):
+  spiro.forward(300)
+  spiro.left(184
+  
+----------------------------------------------------------------
+#Preguntarle el nombre al usuario y saludarlo
+name = input("¿Cómo te llamas?")
+print("¡Hola, {}!".format(name))
+
+#Preguntarle al usuario la cantidad de horas que estuvo en línea cada uno de los últimos 7 días
+for i in range(1,8):
+  hours = int(input("¿Cuántas horas estuviste en línea el día {}?".format(i)))
+  print(hours)
+  
+  
+-----------------------------------------------------------------
+
+#Preguntarle el nombre al usuario y saludarlo
+name = input("¿Cómo te llamas?")
+print("¡Hola, {}!".format(name))
+
+total_hours = 0
+
+#Preguntarle al usuario la cantidad de horas que estuvo en línea cada uno de los últimos 7 días
+for i in range(1, 8):
+  hours = float(input("¿Cuántas horas estuviste en línea el día {}?: ".format(i)))
+  total_hours += hours
+  
+print("Estuviste {} horas en línea en total".format(total_hours))
+
+--------------------------------------------------------------------
+
+#Preguntarle el nombre al usuario y saludarlo
+name = input("¿Cómo te llamas?")
+print("¡Hola, {}!".format(name))
+
+total_hours = 0
+lowest_hours = None
+
+#Preguntarle al usuario la cantidad de horas que estuvo en línea cada uno de los últimos 7 días
+for i in range(1, 8):
+  hours = float(input("¿Cuántas horas estuviste en línea el día {}?: ".format(i)))
+  total_hours += hours
+  
+  #Check if current hours are the lowest hours and store if so
+  if lowest_hours == None or hours < lowest_hours:
+    lowest_hours = hours
+  
+  
+print("Estuviste {} horas en línea en total.".format(total_hours))
+print("La cantidad mínima de tiempo que estuviste en línea en un día fue {} horas".format(lowest_hours))
+
+
+
+------While----------------
+
+
+# Establecer una respuesta correcta
+ANSWER = 9
+
+# Dar 3 vidas al usuario
+lives = 3
+
+# Dar 3 vidas al usuario para adivinar el número, y decirle si acertó o se equivocó
+while lives > 0:
+  guess = int(input("Adivina el numero que estoy pensando"))
+  if guess == ANSWER:
+    print("¡Correcto!")
+    lives = 0
+  else:
+    print("Incorrecto.")
+    lives -= 1
+    
+-----------------------------------------------
+# Establecer la cantidad de dinero de bolsillo
+pocket_money = 40.00
+
+#Preguntar al usuario el precio de los artículos hasta que no pueda comprar más
+while pocket_money > 0:
+  price = float(input("Cual es el prcio del articulo acomprar"))
+  
+  pocket_money -= price
+  print("Te quedan ${:.2f}".format(pocket_money))
+  
+  ----------------------------------------------
+  # Establecer la cantidad de dinero de bolsillo
+pocket_money = 40.00
+still_shopping = True
+
+#Preguntar al usuario el precio de los artículos hasta que no pueda comprar más
+while still_shopping == True:
+  price = float(input("¿Cuánto quieres gastar en este artículo? "))
+  pocket_money -= price
+  print("Te quedan ${:.2f}".format(pocket_money))
+  
+  #Check if the user wants to purchase more
+  confirm = input("Desea seguir comprando")
+  if confirm == "no":
+    still_shopping = False
+    
+ ---------------------------------------------------
+ # Establecer la cantidad de dinero de bolsillo
+pocket_money = 40.00
+still_shopping = True
+
+#Preguntar al usuario el precio de los artículos hasta que no pueda comprar más
+while still_shopping == True and pocket_money > 0:
+  price = float(input("¿Cuánto quieres gastar en este artículo? "))
+  
+  #Check if they have enough for that item
+  if pocket_money - price >= 0:
+    pocket_money -= price
+  else:
+    print("no puedes pagar este articulo")
+
+    
+  print("Te quedan ${:.2f}".format(pocket_money))
+  
+  #Check if the user wants to purchase more
+  confirm = input("¿Te gustaría seguir comprando? ")
+  if confirm == "no":
+    still_shopping = False
+    
+ ------------------------------------------------------
+ #Preguntar al usuario cuánto tiempo hizo ejercicio hoy
+time = int(input("Cuantos minutos de ejercicio hizo hoy"))
+
+#Si se ingresa un número no válido, repetir hasta que el usuario ingrese uno entre 0 y 1440
+while time < 0 or time > 1440:
+  print("Ingresa un número válido. La cantidad total de minutos que hay en un día es 1440")
+  time = int(input("Cuantos minutos de ejercicio hizo hoy"))
+  
+------------------------------------------------------------
+break y continue
+-------------------------------------------------------------
+# Pedir al usuario los datos de inicio de sesión y darle 3 intentos
+PASSWORD = "ekki-ekki-ekki"
+
+for i in range(3):
+  guess = input("Contraseña: ").strip().lower()
+  if guess == PASSWORD: # If correct
+    print("Correcto, autorización completa.")
+    break
+  else: #If incorrect
+    print("Incorrecto")
+    
+else: #If incorrect 3 times
+  print("Lo siento. 3 intentos incorrectos. Se ha bloqueado tu cuenta.")
+---------------------------------------------------------------
+
+# Obligar al usuario a escoger una opción válida
+while True:
+  answer = input("¿Es verdadero o falso? Los tiburones son mamíferos: ").strip().lower()
+  #Salir del bucle si el usuario introduce una repuesta válida
+  if answer == "verdadero" or answer == "falso": 
+    break
+  else: #Díle al usuario que introduzca una respuesta válida
+    print("Responde con verdadero o falso")
+
+#Pasar a comprobar si acertó o se equivocó
+------------------------------------------------------------------
+#Obligar al usuario a ingresar un número válido
+while True:
+  try:
+    height = float(input("Escribe tu altura en metros: "))
+    break
+  except ValueError:
+    print("Por favor, ingresa una altura válida en metros, p. ej. 1.65")
+    
+----------------------------------------------------------------
+# Pedir al usuario que ingrese datos de horas de sueño del día 1 al 7
+for i in range(1,8):
+  hours_sleep = int(input("Ingresa las horas de sueño del día {}: ".format(i)))
+  print("Horas de sueño del día {}: {}".format(i, hours_sleep))
+
+#Imprimir las tablas del 1 al 3
+for i in range(1, 4):
+  for j in range(1, 4):
+    print("{} x {} = {}".format(i, j, i * j))
+    
+    
+ #Bucle .
+maximun = int(input("Escoge un Número: "))
+for i in range(0, maximun):
+  print(i)
+  
+  
+#Bucle While
+answer = input("¿Cuál es el lenguaje de programación más genial?").strip().lower()
+
+while answer != "python":
+    answer = input("¿Cuál es el lenguaje de programación más genial?").strip().lower()
